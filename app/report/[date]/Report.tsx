@@ -12,7 +12,7 @@ export default ({report}: { report: any }) => {
                     {!(report[0].data.length) && ("Записей Не Найдено")}
                     <Accordion>
                         {report[0].data.map((doc: any) => (
-                            <AccordionItem title={"Id: " + doc.processed_entity.id}>
+                            <AccordionItem title={"Id: " + doc.orig.id}>
                                 <Entity doc={doc.processed_entity}/>
                             </AccordionItem>
                         ))}
